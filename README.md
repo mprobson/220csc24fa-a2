@@ -1,8 +1,8 @@
-# 220csc24fa-a2
+# A2. 1D Stencil
 
 Due Date: 10/7 at midnight
 
-# Instructions
+## Instructions
 
 Implement the one dimensional stencil code discussed in class (Lecture 2.2)
 - use main.cu as skeleton
@@ -12,10 +12,13 @@ Implement the one dimensional stencil code discussed in class (Lecture 2.2)
 
 Test
 - How to verify correctness?
+- Simple case:
+  - input: All 1's [1, 1, ... 1]
+  - output: [4, 5, 6, 7, 7, ... 7, 6, 5, 4]
 
-# Tips / Reminders / Hints
+## Tips / Reminders / Hints
 
-Memory Allocation
+CUDA Memory Allocation Calls:
 - `cudaMallocManaged`
 - `cudaFree`
 
@@ -29,9 +32,12 @@ For error checking,
 `printf("%s\n", cudaGetErrorString(cudaGetLastError()));`
 will return the last CUDA error and print it as a string
 
-# Submission
+Remember to make may small commits as you go.
+You can look at the git tutorials on Moodle for help.
 
-1. Uploaded code (main.cu)
+## Submission
+
+1. Uploaded code (`main.cu`)
 
 2. Additional test cases/data.
    This could be in the form of a txt file, json, code, etc.
@@ -43,9 +49,9 @@ will return the last CUDA error and print it as a string
 - How would you approach differently?
 - Anything else you want me to know?
 
-# Extras
+## Extras
 
-Benchmark your implementation using nvprof (or something similar)
+Benchmark your implementation using `nvprof` (or something similar)
 with and without utilizing shared memory.
 What is the obsereved difference?
 
