@@ -32,6 +32,13 @@ For error checking,
 `printf("%s\n", cudaGetErrorString(cudaGetLastError()));`
 will return the last CUDA error and print it as a string
 
+You can check to make sure that you code is not accessing unallocated memory
+by utilizing NVIDIA's memory sanitizer tool.
+You can run it ok `keroppi` using the following line.
+```sh
+compute-sanitizer --tool memcheck ./your_cuda_executable_not_source
+```
+
 Remember to make may small commits as you go.
 You can look at the git tutorials on Moodle for help.
 
